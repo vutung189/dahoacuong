@@ -172,11 +172,11 @@ if ( ! function_exists( 'online_shop_header' ) ) :
 	            $online_shop_header_top_social_display_selection = $online_shop_customizer_all_values['online-shop-header-top-social-display-selection'];
 	            $online_shop_top_right_button_options = $online_shop_customizer_all_values['online-shop-top-right-button-options'];
 	            ?>
-                <div class="top-header-wrapper clearfix">
+                <!--<div class="top-header-wrapper clearfix">
                     <div class="wrapper">
                         <div class="header-left">
 				            <?php
-                            if( 'left' == $online_shop_header_top_basic_info_display_selection ){
+/*                            if( 'left' == $online_shop_header_top_basic_info_display_selection ){
 	                            do_action('online_shop_action_basic_info');
                             }
 				            if( 'left' == $online_shop_header_top_menu_display_selection ){
@@ -185,11 +185,11 @@ if ( ! function_exists( 'online_shop_header' ) ) :
 				            if( 'left' == $online_shop_header_top_social_display_selection ){
 					            do_action('online_shop_action_social_links');
 				            }
-				            ?>
+				            */?>
                         </div>
                         <div class="header-right">
                             <?php
-	                        if( 'right' == $online_shop_header_top_basic_info_display_selection ){
+/*	                        if( 'right' == $online_shop_header_top_basic_info_display_selection ){
 		                        do_action('online_shop_action_basic_info');
 	                        }
 	                        if( 'right' == $online_shop_header_top_menu_display_selection ){
@@ -201,28 +201,29 @@ if ( ! function_exists( 'online_shop_header' ) ) :
                             if( 'disable' != $online_shop_top_right_button_options ){
 	                            $online_shop_top_right_button_title = !empty( $online_shop_top_right_button_title )? $online_shop_top_right_button_title : '';
 	                            if( 'widget' == $online_shop_top_right_button_options ){
-		                            ?>
+		                            */?>
                                     <div class="icon-box">
-                                        <a id="at-modal-open" class="my-account at-modal" href="<?php echo esc_url( $online_shop_top_right_button_link );?>">
-				                            <?php echo esc_html( $online_shop_top_right_button_title );?>
+                                        <a id="at-modal-open" class="my-account at-modal" href="<?php /*echo esc_url( $online_shop_top_right_button_link );*/?>">
+				                            <?php /*echo esc_html( $online_shop_top_right_button_title );*/?>
                                         </a>
                                     </div>
 		                            <?php
-	                            }
+/*	                            }
 	                            else{
-		                            ?>
+		                            */?>
                                     <div class="icon-box">
-                                        <a class="my-account" href="<?php echo esc_url( $online_shop_top_right_button_link );?>">
-				                            <?php echo esc_html( $online_shop_top_right_button_title );?>
+                                        <a class="my-account" href="<?php /*echo esc_url( $online_shop_top_right_button_link );*/?>">
+				                            <?php /*echo esc_html( $online_shop_top_right_button_title );*/?>
                                         </a>
                                     </div>
 		                            <?php
-	                            }
+/*	                            }
                             }
-	                        ?>
+	                        */?>
                         </div><!--.header-right-->
-                    </div><!-- .top-header-container -->
-                </div><!-- .top-header-wrapper -->
+            <!--</div><!-- .top-header-container -->
+                <!--</div>--><!-- .top-header-wrapper -->
+                <!--vandd edit 14/7-->
                 <?php
             }
             ?>
@@ -348,28 +349,28 @@ if ( ! function_exists( 'online_shop_header' ) ) :
 	                            $online_shop_special_menu_text = $online_shop_customizer_all_values['online-shop-special-menu-text'];
                                 ?>
                                 <ul class="menu special-menu-wrapper">
-                                    <li class="menu-item menu-item-has-children">
-                                        <a href="javascript:void(0)" class="special-menu">
-                                            <i class="fa fa-navicon toggle"></i><?php echo esc_html( 'Danh Mục'); ?>
-                                        </a>
-			                            <?php
-			                            if ( has_nav_menu( 'special-menu' ) ) {
-				                            wp_nav_menu( array(
-					                            'theme_location' => 'special-menu',
-					                            'menu_class' => 'sub-menu special-sub-menu',
-					                            'container' => false
-				                            ) );
-			                            }
-			                            ?>
-                                        <div class="responsive-special-sub-menu clearfix"></div>
-                                    </li>
+<!--                                    <li class="menu-item menu-item-has-children">-->
+<!--                                        <a href="javascript:void(0)" class="special-menu">-->
+<!--                                            <i class="fa fa-navicon toggle"></i>--><?php //echo esc_html( 'Danh Mục'); ?>
+<!--                                        </a>-->
+<!--			                            --><?php
+//			                            if ( has_nav_menu( 'special-menu' ) ) {
+//				                            wp_nav_menu( array(
+//					                            'theme_location' => 'special-menu',
+//					                            'menu_class' => 'sub-menu special-sub-menu',
+//					                            'container' => false
+//				                            ) );
+//			                            }
+//			                            ?>
+<!--                                        <div class="responsive-special-sub-menu clearfix"></div>-->
+<!--                                    </li>-->
                                 </ul>
                                 <?php
                             }/*special menu*/
                             ?>
                             <div class="acmethemes-nav">
 	                            <?php
-	                            wp_nav_menu(array('theme_location' => 'primary','container' => false));
+	                            wp_nav_menu(array('theme_location' => 'special-menu','container' => false));
 
 	                            $online_shop_menu_right_text = $online_shop_customizer_all_values['online-shop-menu-right-text'];
 	                            $online_shop_menu_right_highlight_text = $online_shop_customizer_all_values['online-shop-menu-right-highlight-text'];

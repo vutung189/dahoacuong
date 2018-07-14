@@ -1176,8 +1176,9 @@ a.my-account:hover{
 	float: left;
 }
 .online-shop-enable-special-menu  .acmethemes-nav {
-	float: right;
-	width: calc(100% - 255px);
+	/*float: right;*/
+	/*width: calc(100% - 255px);*/
+	/*vandd edit 14/7*/
 }
 
 /*categories*/
@@ -1247,6 +1248,7 @@ a.my-account:hover{
 	vertical-align: top;
 }
 .advance-product-search .search-field {
+	float: right; /*vandd edit 14/7*/
 	display: inline-block;
 	padding: 0 10px;
 	height: 38px;
